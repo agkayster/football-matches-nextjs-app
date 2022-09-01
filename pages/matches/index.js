@@ -30,8 +30,6 @@ export default function Home() {
 		}
 	};
 
-	console.log('get form data =>', formData);
-
 	return (
 		<div>
 			<div className='grid h-screen md:place-items-center md:w-auto place-items-center w-[62.5rem]'>

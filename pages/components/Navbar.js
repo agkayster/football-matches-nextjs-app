@@ -58,8 +58,6 @@ export default function Navbar() {
 		router.push('/matches');
 	};
 
-	console.log('get navbar token =>', token);
-
 	return (
 		<nav className='flex md:filter bg-white px-4 py-4 h-15 md:w-auto md:items-center w-[62.5rem]'>
 			<MobileNav

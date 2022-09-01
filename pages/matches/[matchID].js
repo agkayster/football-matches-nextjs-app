@@ -21,7 +21,6 @@ const Match = () => {
 	// used router.query.matchID to get the particular match ID for [matchID].js //
 	const router = useRouter();
 	const { matchID } = router.query;
-	// console.log('get query id =>', matchID);
 
 	// use push to redirect to a new route //
 	const { push } = useRouter();
