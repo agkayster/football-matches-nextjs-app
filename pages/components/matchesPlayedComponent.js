@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { MatchesContext } from '../matches/allmatches';
+// import { MatchesContext } from '../matches/allmatches';
 
 // exported to allmatches.js as Child component //
-const MatchesPlayed = () => {
-	const { played, handlePlayedChange } = useContext(MatchesContext);
+const MatchesPlayed = ({ played, handlePlayedChange }) => {
+	// const { played, handlePlayedChange } = useContext(MatchesContext);
 	return (
 		<div className='absolute left-[21rem] top-[29rem] md:left-[25.5rem] md:top-96'>
 			<label

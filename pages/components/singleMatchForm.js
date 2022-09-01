@@ -2,21 +2,33 @@ import React, { useContext } from 'react';
 import { MatchContext } from '../matches/[matchID]';
 import Button from './button';
 
-const SingleMatchForm = () => {
-	const {
-		homeTeam,
-		formData,
-		handleChange,
-		awayTeam,
-		time,
-		venue,
-		date,
-		year,
-		handleSubmit,
-	} = useContext(MatchContext);
+const SingleMatchForm = ({
+	handleSingleMatchSubmit,
+	homeTeam,
+	singleMatchFormData,
+	handleSingleMatchChange,
+	awayTeam,
+	time,
+	venue,
+	date,
+	year,
+}) => {
+	// const {
+	// 	handleSingleMatchSubmit,
+	// 	homeTeam,
+	// 	singleMatchFormData,
+	// 	handleSingleMatchChange,
+	// 	awayTeam,
+	// 	time,
+	// 	venue,
+	// 	date,
+	// 	year,
+	// 	matchID,
+	// 	idMatch,
+	// } = useContext(MatchContext);
 	return (
 		<>
-			<form className='font-["Mukta"]' onSubmit={handleSubmit}>
+			<form className='font-["Mukta"]' onSubmit={handleSingleMatchSubmit}>
 				<div className='w-screen grid grid-cols-3 md:flex md:justify-between px-3'>
 					<div>
 						<label className='block text-center'>Home Team</label>
@@ -25,8 +37,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='homeTeam'
 							placeholder={homeTeam}
-							value={formData.homeTeam || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.homeTeam || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 					<div className='ml-3'>
@@ -36,8 +48,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='awayTeam'
 							placeholder={awayTeam}
-							value={formData.awayTeam || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.awayTeam || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 					<div className='ml-3'>
@@ -47,8 +59,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='time'
 							placeholder={time}
-							value={formData.time || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.time || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 					<div className='ml-3'>
@@ -58,8 +70,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='venue'
 							placeholder={venue}
-							value={formData.venue || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.venue || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 					<div className='ml-3'>
@@ -69,8 +81,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='date'
 							placeholder={date}
-							value={formData.date || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.date || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 					<div className='ml-3'>
@@ -80,8 +92,8 @@ const SingleMatchForm = () => {
 							className='border-2 rounded-md pl-2'
 							name='year'
 							placeholder={year}
-							value={formData.year || ''}
-							onChange={handleChange}
+							value={singleMatchFormData.year || ''}
+							onChange={handleSingleMatchChange}
 						/>
 					</div>
 				</div>
@@ -94,8 +106,8 @@ const SingleMatchForm = () => {
 							className='mr-2 leading-tight'
 							type='checkbox'
 							name='played'
-							checked={formData.played}
-							onChange={handleChange}
+							checked={singleMatchFormData.played}
+							onChange={handleSingleMatchChange}
 						/>
 					</label>
 				</div>

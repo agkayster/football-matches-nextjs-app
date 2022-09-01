@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import Button from './button';
-import { MatchesContext } from '../matches/allmatches';
+// import { MatchesContext } from '../matches/allmatches';
 
 // exported to allmatches.js as Child component //
-function Form() {
-	const { formData, handleSubmit, handleChange } = useContext(MatchesContext);
+function Form({ formData, handleSubmit, handleChange }) {
 	return (
 		<>
 			<h1 className='text-center font-["Mukta"] text-2xl pt-3'>

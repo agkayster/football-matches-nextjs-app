@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import { MatchesContext } from '../matches/allmatches';
 import Link from 'next/link';
+import { FaFutbol } from 'react-icons/fa';
+import { FaTrashAlt } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 
 // exported to allmatches.js as Child component //
-const MatchesList = () => {
-	const { matchData, handleDelete, FaEdit, FaTrashAlt, FaFutbol } =
-		useContext(MatchesContext);
+const MatchesList = ({ matchData, handleDelete }) => {
+	// const { matchData, handleDelete, FaEdit, FaTrashAlt, FaFutbol } =
+	// 	useContext(MatchesContext);
+	console.log('get match data =>', matchData);
 	return (
 		<>
 			<div className='grid md:grid-cols-4 grid-cols-2 gap-4 place-items-center border mt-10 font-["Mukta"] px-1'>

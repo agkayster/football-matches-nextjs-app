@@ -1,13 +1,29 @@
 // import axios from 'axios';
 import { axiosInstance } from '../../Utils/API';
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import { useRouter } from 'next/router';
 import SingleMatchForm from '../components/singleMatchForm';
+// import { MatchContext } from '../_app';
 
-export const MatchContext = createContext();
+// export const MatchContext = createContext();
 
 const Match = () => {
-	const [formData, setFormData] = useState({ played: false });
+	// const {
+	// 	handleSingleMatchSubmit,
+	// 	homeTeam,
+	// 	singleMatchFormData,
+	// 	handleSingleMatchChange,
+	// 	awayTeam,
+	// 	time,
+	// 	venue,
+	// 	date,
+	// 	year,
+	// 	matchID,
+	// 	idMatch,
+	// } = useContext(MatchContext);
+	const [singleMatchFormData, setSingleMatchFormData] = useState({
+		played: false,
+	});
 	const [token, setToken] = useState('');
 	const [singleMatchData, setSingleMatchData] = useState({});
 	const [homeTeam, setHomeTeam] = useState('');
@@ -22,7 +38,7 @@ const Match = () => {
 	const router = useRouter();
 	const { matchID } = router.query;
 
-	// use push to redirect to a new route //
+	// // use push to redirect to a new route //
 	const { push } = useRouter();
 
 	useEffect(() => {
@@ -55,12 +71,12 @@ const Match = () => {
 	}, [matchID]);
 
 	// we get matchID from router query above //
-	const handleSubmit = async (e) => {
+	const handleSingleMatchSubmit = async (e) => {
 		e.preventDefault();
 		try {
 			// we pass the match ID into here and the url is based on the folder structure //
 			await axiosInstance
-				.patch(`matches/${matchID}`, formData, {
+				.patch(`matches/${matchID}`, singleMatchFormData, {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
@@ -72,13 +88,13 @@ const Match = () => {
 		}
 	};
 
-	const handleChange = (e) => {
+	const handleSingleMatchChange = (e) => {
 		// const { name, value } = e.target;
 		const target = e.target;
 		const name = target.name;
 		const value =
 			target.type === 'checkbox' ? target.checked : target.value;
-		setFormData((formData) => ({ ...formData, [name]: value }));
+		setSingleMatchFormData((formData) => ({ ...formData, [name]: value }));
 	};
 
 	return (
@@ -86,20 +102,19 @@ const Match = () => {
 			<h1 className='font-["Mukta"] text-center pt-5'>
 				MATCH ID: {idMatch}
 			</h1>
-			<MatchContext.Provider
-				value={{
-					handleSubmit,
-					homeTeam,
-					formData,
-					handleChange,
-					awayTeam,
-					time,
-					venue,
-					date,
-					year,
-				}}>
-				<SingleMatchForm />
-			</MatchContext.Provider>
+
+			<SingleMatchForm
+				handleSingleMatchSubmit={handleSingleMatchSubmit}
+				homeTeam={homeTeam}
+				singleMatchFormData={singleMatchFormData}
+				handleSingleMatchChange={handleSingleMatchChange}
+				awayTeam={awayTeam}
+				time={time}
+				venue={venue}
+				date={date}
+				year={year}
+				matchID={matchID}
+			/>
 		</div>
 	);
 };
