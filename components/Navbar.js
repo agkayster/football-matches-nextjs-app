@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { TokenContext } from '../_app';
+import { TokenContext } from '../pages/_app';
 import { useRouter } from 'next/router';
 
 function MobileNav({ open, setOpen, token, setToken }) {

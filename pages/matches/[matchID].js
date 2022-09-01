@@ -2,7 +2,7 @@
 import { axiosInstance } from '../../Utils/API';
 import { useState, useEffect, createContext, useContext } from 'react';
 import { useRouter } from 'next/router';
-import SingleMatchForm from '../components/singleMatchForm';
+import SingleMatchForm from '../../components/singleMatchForm';
 
 const Match = () => {
 	const [singleMatchFormData, setSingleMatchFormData] = useState({

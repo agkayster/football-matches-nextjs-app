@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import { createContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 

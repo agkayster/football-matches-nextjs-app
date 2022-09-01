@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { axiosInstance } from '../../Utils/API';
 import { useRouter } from 'next/router';
-import MatchesList from '../components/matchesList';
-import Form from '../components/form';
-import TeamSearch from '../components/teamSearchComponent';
-import MatchDetailsComponent from '../components/matchDetailsComponent';
-import MatchesVenues from '../components/matchVenuesComponent';
-import TeamSort from '../components/teamSortComponent';
-import MatchesPlayed from '../components/matchesPlayedComponent';
+import MatchesList from '../../components/matchesList';
+import Form from '../../components/form';
+import TeamSearch from '../../components/teamSearchComponent';
+import MatchDetailsComponent from '../../components/matchDetailsComponent';
+import MatchesVenues from '../../components/matchVenuesComponent';
+import TeamSort from '../../components/teamSortComponent';
+import MatchesPlayed from '../../components/matchesPlayedComponent';
 
 function Matches() {
 	const initialValues = {
