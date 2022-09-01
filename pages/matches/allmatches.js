@@ -348,11 +348,11 @@ function Matches() {
 
 	return (
 		<div className='container mx-auto px-0 mt-0 md:h-auto md:w-auto h-[112.5rem] bg-[#f2f4f8] w-[62.5rem]'>
-			<Form
+			{/* <Form
 				formData={formData}
 				handleSubmit={handleSubmit}
 				handleChange={handleChange}
-			/>
+			/> */}
 			{/* <TeamSearch
 				searchInput={searchInput}
 				handleHomeTeamSearch={handleHomeTeamSearch}
