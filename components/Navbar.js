@@ -14,7 +14,7 @@ function MobileNav({ open, setOpen, token, setToken }) {
 		// sets our token in state to null to remove token set in login code in index.js //
 		setToken(null);
 		// routes us back to login page //
-		router.push('/matches');
+		router.push('/');
 	};
 	return (
 		<div
@@ -55,7 +55,7 @@ export default function Navbar() {
 		// sets our token in state to null to remove token set in login code in index.js //
 		setToken(null);
 		// routes us back to login page //
-		router.push('/matches');
+		router.push('/');
 	};
 
 	return (
