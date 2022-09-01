@@ -358,6 +358,8 @@ function Matches() {
 				handleHomeTeamSearch={handleHomeTeamSearch}
 				handleAwayTeamSearch={handleAwayTeamSearch}
 			/> */}
+			<Form />
+			<TeamSearch />
 			<MatchDetailsComponent
 				matchDetailsArr={matchDetailsArr}
 				handleFieldChange={handleFieldChange}
