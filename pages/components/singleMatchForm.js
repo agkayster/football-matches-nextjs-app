@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { MatchContext } from '../matches/[matchID]';
+import React from 'react';
 import Button from './button';
 
 const SingleMatchForm = ({
@@ -12,20 +11,9 @@ const SingleMatchForm = ({
 	venue,
 	date,
 	year,
+	matchID,
+	idMatch,
 }) => {
-	// const {
-	// 	handleSingleMatchSubmit,
-	// 	homeTeam,
-	// 	singleMatchFormData,
-	// 	handleSingleMatchChange,
-	// 	awayTeam,
-	// 	time,
-	// 	venue,
-	// 	date,
-	// 	year,
-	// 	matchID,
-	// 	idMatch,
-	// } = useContext(MatchContext);
 	return (
 		<>
 			<form className='font-["Mukta"]' onSubmit={handleSingleMatchSubmit}>

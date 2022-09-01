@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-// import { MatchesContext } from '../matches/allmatches';
 
 // exported to allmatches.js as Child component //
 export default function TeamSort({ sortTerm, handleSortChange }) {
-	// const { sortTerm, handleSortChange } = useContext(MatchesContext);
 	return (
 		<div className='absolute left-[32.5rem] top-[29rem] md:left-[43rem] md:top-96'>
 			<label

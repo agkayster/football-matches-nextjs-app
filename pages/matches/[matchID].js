@@ -3,24 +3,8 @@ import { axiosInstance } from '../../Utils/API';
 import { useState, useEffect, createContext, useContext } from 'react';
 import { useRouter } from 'next/router';
 import SingleMatchForm from '../components/singleMatchForm';
-// import { MatchContext } from '../_app';
-
-// export const MatchContext = createContext();
 
 const Match = () => {
-	// const {
-	// 	handleSingleMatchSubmit,
-	// 	homeTeam,
-	// 	singleMatchFormData,
-	// 	handleSingleMatchChange,
-	// 	awayTeam,
-	// 	time,
-	// 	venue,
-	// 	date,
-	// 	year,
-	// 	matchID,
-	// 	idMatch,
-	// } = useContext(MatchContext);
 	const [singleMatchFormData, setSingleMatchFormData] = useState({
 		played: false,
 	});
@@ -70,7 +54,7 @@ const Match = () => {
 		getMatchItem();
 	}, [matchID]);
 
-	// we get matchID from router query above //
+	// // we get matchID from router query above //
 	const handleSingleMatchSubmit = async (e) => {
 		e.preventDefault();
 		try {

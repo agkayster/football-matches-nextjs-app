@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-// import { MatchesContext } from '../matches/allmatches';
+import React from 'react';
 
 // exported to allmatches.js as Child component //
 const MatchDetailsComponent = ({
@@ -7,8 +6,6 @@ const MatchDetailsComponent = ({
 	handleFieldChange,
 	matchDetailsState,
 }) => {
-	// const { matchDetailsArr, handleFieldChange, matchDetailsState } =
-	// 	useContext(MatchesContext);
 	return (
 		<>
 			<div className='checkbox-group px-6 md:px-10'>

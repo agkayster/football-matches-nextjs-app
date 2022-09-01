@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-import { MatchesContext } from '../_app';
+import React from 'react';
 
 // exported to allmatches.js as Child component //
-const TeamSearch = () => {
-	const { searchInput, handleHomeTeamSearch, handleAwayTeamSearch } =
-		useContext(MatchesContext);
+const TeamSearch = ({
+	searchInput,
+	handleHomeTeamSearch,
+	handleAwayTeamSearch,
+}) => {
 	return (
 		<div className='flex flex-row justify-center mt-10'>
 			<div>

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-// import { MatchesContext } from '../matches/allmatches';
 
 // exported to allmatches.js as Child component //
 function MatchesVenues({ venues, handleVenueChange, venueName }) {
-	// const { venues, handleVenueChange, venueName } = useContext(MatchesContext);
 	return (
 		<div className='grid grid-cols-6 gap-2 mt-10 pl-8'>
 			{venues &&
