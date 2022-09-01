@@ -353,11 +353,11 @@ function Matches() {
 				handleSubmit={handleSubmit}
 				handleChange={handleChange}
 			/>
-			<TeamSearch
+			{/* <TeamSearch
 				searchInput={searchInput}
 				handleHomeTeamSearch={handleHomeTeamSearch}
 				handleAwayTeamSearch={handleAwayTeamSearch}
-			/>
+			/> */}
 			<MatchDetailsComponent
 				matchDetailsArr={matchDetailsArr}
 				handleFieldChange={handleFieldChange}
