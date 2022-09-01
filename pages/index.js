@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
-import { axiosInstance } from '../../Utils/API';
-import { TokenContext } from '../_app';
+import { axiosInstance } from '../Utils/API';
+import { TokenContext } from './_app';
 
 export default function Home() {
 	const [formData, setFormData] = useState({});
