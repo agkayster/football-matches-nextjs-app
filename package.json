@@ -1,20 +1,31 @@
 {
-  "name": "epl-games",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.2.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3"
-  }
+	"name": "epl-games",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"axios": "^0.27.2",
+		"cors": "^2.8.5",
+		"lodash": "^4.17.21",
+		"next": "12.2.3",
+		"next-auth": "^4.10.3",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-icons": "^4.4.0",
+		"react-router-dom": "^6.3.0",
+		"swr": "^1.3.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/forms": "^0.5.2",
+		"autoprefixer": "^10.4.8",
+		"eslint": "8.20.0",
+		"eslint-config-next": "12.2.3",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.7"
+	}
 }
