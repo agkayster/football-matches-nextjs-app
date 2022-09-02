@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 
 // exported to allmatches.js as Child component //
 function MatchesVenues({ venues, handleVenueChange, venueName }) {
@@ -24,4 +24,4 @@ function MatchesVenues({ venues, handleVenueChange, venueName }) {
 	);
 }
 
-export default MatchesVenues;
+export default memo(MatchesVenues);

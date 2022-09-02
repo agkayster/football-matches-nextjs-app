@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { FaFutbol } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
@@ -64,4 +64,4 @@ const MatchesList = ({ matchData, handleDelete }) => {
 	);
 };
 
-export default MatchesList;
+export default memo(MatchesList);
